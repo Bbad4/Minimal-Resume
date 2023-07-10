@@ -23,10 +23,6 @@ body {
     grid-gap: 20px;
     grid-template-columns: 1fr;
 }
-.href_text {
-    color: inherit;
-    text-decoration: none;  
-}
 
 .grid_intro {
     grid-template-columns: 1fr 2fr;
@@ -70,7 +66,7 @@ body {
     grid-column: 1/-1;
 }
 
-.badge_pill, .badge_rectangle {
+.badge_pill, .badge_rectangle, .button_small {
     background-color: #404040;
     border-radius: 20px;
     color: #D0D0D0;
@@ -88,12 +84,21 @@ body {
     margin: 0px 5px 15px 0px;
     padding: 4px 10px;
 }
+.button_small {
+    background-color: #006150;
+    border: none;
+    color: #D0D0D0;
+    cursor: pointer;
+    font-size: 13px;
+    transition: 0.4s ease-in-out; 
+    padding: 6px 14px;
+}
 
 .button, .fab {
     background-color: #006150;
     border: none;
     border-radius: 20px;
-    color: #DCDCDC;
+    color: #D0D0D0;
     cursor: pointer;
     display: inline-block;
     font-size: 16px;
