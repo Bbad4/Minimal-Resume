@@ -90,7 +90,7 @@ body {
     color: #D0D0D0;
     cursor: pointer;
     font-size: 13px;
-    transition: 0.4s ease-in-out; 
+    transition: 0.3s ease-in-out; 
     padding: 6px 14px;
 }
 
@@ -105,7 +105,7 @@ body {
     font-weight: 700;
     margin: 0px 5px 15px 0px;
     padding: 8px 18px;
-    transition: 0.4s ease-in-out;
+    transition: 0.3s ease-in-out;
 }
 .fab {
     border-radius: 50%;
@@ -128,11 +128,11 @@ body {
     position: fixed;
     right: 15px;
     text-align: right;
-    transition: 0.4s ease-in-out;
+    transition: 0.3s ease-in-out;
     visibility: hidden;
 }
 
-.button:hover, .fab:hover {
+.button_small:hover, .button:hover, .fab:hover {
     box-shadow: 0 0 10px #006150;
 }
 .fab:hover .material-icons {
