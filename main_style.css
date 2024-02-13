@@ -1,5 +1,6 @@
 html {
     scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
 }
 
 :root {
@@ -7,7 +8,8 @@ html {
     --color: #606060;
     --shadow-color-1: #d8d8d8;
     --shadow-color-2: #f8f8f8;
-    --button-color: #b5cec9;
+    --button-background-color: #b5cec9;
+    --button-color: #075a4b;
 }
   
 @media (prefers-color-scheme: dark) {
@@ -16,7 +18,8 @@ html {
         --color: #c0c0c0;
         --shadow-color-1: #080808;
         --shadow-color-2: #303030;
-        --button-color: #075a4b;
+        --button-background-color: #075a4b;
+        --button-color: #b5cec9;
 
         .grid_intro div:nth-child(1) {
             box-shadow: 18px 18px 18px #080808, -18px -18px 18px #282828;
@@ -32,7 +35,7 @@ body {
     line-height: 1.6;
     margin: auto;
     max-width: 1080px;
-    padding: 25px;
+    padding: 20px;
 }
 
 .grid_intro, .grid_experience, .grid_education, .grid_skills, .grid_capstone {
@@ -109,11 +112,11 @@ body {
 }
 
 .button, .button_small, .button_fab {
-    background-color: var(--button-color);
+    background-color: var(--button-background-color);
     border: none;
     border-radius: 20px;
     box-shadow: 4px 4px 8px var(--shadow-color-1), -4px -4px 8px var(--shadow-color-2);
-    color: var(--color);
+    color: var(--button-color);
     cursor: pointer;
     display: inline-block;
     font-size: 15px;
@@ -130,12 +133,12 @@ body {
 
 .button_fab {
     border-radius: 50%;
-    bottom: 25px;  
+    bottom: 20px;  
     height: 60px;
     margin: 0px;
     padding: 0px;
     position: fixed;
-    right: 25px;
+    right: 20px;
     width: 60px;  
 }
 .material-symbols-outlined {
@@ -144,11 +147,11 @@ body {
     transition: transform 0.3s ease-in-out;
 }
 .fab_menu {
-    bottom: 40px;
+    bottom: 35px;
     list-style: none;
     opacity: 0;
     position: fixed;
-    right: 20px;
+    right: 15px;
     text-align: right;
     transition: 0.3s ease-in-out;
     visibility: hidden;
