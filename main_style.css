@@ -4,134 +4,146 @@ html {
 }
 
 :root {
-    --background-color: #e8e8e8;
-    --color: #606060;
-    --shadow-color-1: #dcdcdc;
-    --shadow-color-2: #f5f5f5;
+    --background-color: rgb(232,232,232);
+    --color: rgb(96,96,96);
+    --shadow-color-1: rgb(216,216,216);
+    --shadow-color-2: rgb(248,248,248);
     --button-background-color: #b5cec9;
     --button-color: #075a4b;
 }
   
 @media (prefers-color-scheme: dark) {
     :root {
-        --background-color: #202020;
-        --color: #bebebe;
-        --shadow-color-1: #101010;
-        --shadow-color-2: #2c2c2c;
+        --background-color: rgb(32,32,32);
+        --color: rgb(176,176,176);
+        --shadow-color-1: rgb(16,16,16);
+        --shadow-color-2: rgb(48,48,48);
         --button-background-color: #075a4b;
         --button-color: #b5cec9;
     }  
 }
+
 
 body {
     background-color: var(--background-color);
     color: var(--color);
     font-family: 'Noto Sans', sans-serif;
     font-size: 15px;
-    line-height: 1.6;
+    line-height: 1.7;
     margin: auto;
     max-width: 1080px;
     padding: 20px;
 }
+h3, p, ul {
+    margin: 5px 0px 5px 0px;
+}
+h1 {
+    margin: 15px 0px 15px 0px;
+}
+ul {
+    padding-left: inherit;
+}
+
 
 .grid_intro, .grid_experience, .grid_education, .grid_skills, .grid_capstone {
     display: grid;
     grid-auto-rows: auto;
     grid-gap: 25px;
-    grid-template-columns: 1fr;
 }
+
 .container {
     background-color: var(--background-color);
     border-radius: 25px;
-    box-shadow: 5px 5px 10px var(--shadow-color-1), -5px -5px 10px var(--shadow-color-2);
-    padding: 5px 20px;
+    box-shadow: 4px 4px 14px var(--shadow-color-1), -4px -4px 14px var(--shadow-color-2);
+    padding: 15px 20px;
 }
 
 .grid_intro {
     grid-template-columns: 1fr 2fr;
+    & .container:nth-child(1) {
+        border-radius: 50%;
+        box-shadow: inset 4px 4px 14px var(--shadow-color-1), inset -4px -4px 14px var(--shadow-color-2);
+        grid-column: 1/2;
+        grid-row: 1/3;
+        max-height: 200px;
+        max-width: 200px;
+        padding: 20px;
+        place-self: center;
+        & img {
+            border-radius: 50%;
+            height: 100%;
+            width: 100%;
+        }
+    }
+    & .container:nth-child(2) {
+        box-shadow: none;
+        & h3 {
+            margin-top: -18px;
+            margin-bottom: -18px;
+        }
+    }
 }
-.grid_intro div:nth-child(1) {
-    border-radius: 50%;
-    box-shadow: inset 5px 5px 10px var(--shadow-color-1), inset -5px -5px 10px var(--shadow-color-2);
-    grid-column: 1/2;
-    grid-row: 1/3;
-    max-height: 200px;
-    max-width: 200px;
-    padding: 20px;
-    place-self: center;
+.grid_experience, .grid_capstone {
+    grid-template-columns: 1fr;
 }
-.img {
-    border-radius: 50%;
-    height: 100%;
-    width: 100%;
-}
-.grid_intro div:nth-child(2) {
-    box-shadow: none;
-}
-.h3_margin {
-    margin: -20px 0px 0px 0px;
-}
-
-.ul_padding {
-    padding-left: inherit;
-}
-
 .grid_education, .grid_skills {
     grid-template-columns: 1fr 1fr;
-}
-.grid_education div:nth-child(1), .grid_skills div:nth-child(1) {
-    grid-column: 1/-1;
+    & .container:nth-child(1) {
+        grid-column: 1/-1;
+    }
 }
 
-.badge_pill {
+
+.badge_indent, .badge_pop {
     background-color: var(--background-color);
     border-radius: 20px;
-    box-shadow: inset 3px 3px 6px var(--shadow-color-1), inset -3px -3px 6px var(--shadow-color-2);
-    color: var(--color);
     display: inline-block;
-    font-size: 11px;
-    font-weight: 600;
-    margin: 0px 6px 0px 0px;
+    color: var(--color);
     padding: 5px 12px;
 }
-.badge_rectangle {
-    background-color: var(--background-color);
-    border-radius: 8px;
-    box-shadow: 3px 3px 6px var(--shadow-color-1), -3px -3px 6px var(--shadow-color-2);
-    color: var(--color);
-    display: inline-block;
-    font-size: 13px;
-    font-weight: 600;
-    margin: 0px 6px 16px 0px;
-    padding: 4px 10px;
+.badge_indent {
+    box-shadow: inset 2px 2px 6px var(--shadow-color-1), inset -2px -2px 6px var(--shadow-color-2);
+    font-size: 11px;
+    margin: 5px 2.5px;
+}
+.badge_pop {
+    box-shadow: 2px 2px 6px var(--shadow-color-1), -2px -2px 6px var(--shadow-color-2);
+    font-size: 14px;
+    margin: 6px 3px;
 }
 
-.button, .button_small, .button_fab {
+.button_small, .button, .button_fab {
     background-color: var(--button-background-color);
     border: none;
-    border-radius: 20px;
-    box-shadow: 3px 3px 6px var(--shadow-color-1), -3px -3px 6px var(--shadow-color-2);
+    box-shadow: 2px 2px 6px var(--shadow-color-1), -2px -2px 6px var(--shadow-color-2);
+    display: inline-block;
     color: var(--button-color);
     cursor: pointer;
-    display: inline-block;
-    font-size: 15px;
     font-weight: 600;
-    margin: 0px 6px 16px 0px;
-    padding: 8px 18px;
     transition: 0.3s ease-in-out;
+    &:hover {
+        background-color: var(--background-color);
+        box-shadow: inset 2px 2px 6px var(--shadow-color-1), inset -2px -2px 6px var(--shadow-color-2);
+    }
 }
 .button_small {
-    font-size: 13px;
-    margin: 0px 6px 0px 0px;
-    padding: 6px 14px; 
+    border-radius: 20px;
+    font-size: 12px;
+    margin: 5px 2.5px;  
+    padding: 6px 12px;
+}
+.button {
+    border-radius: 20px;
+    font-size: 15px;
+    margin: 6px 3px;
+    padding: 7px 16px;
 }
 
 .button_fab {
     border-radius: 50%;
     bottom: 20px;  
+    font-size: 15px;
     height: 60px;
-    margin: 0px;
-    padding: 0px;
     position: fixed;
     right: 20px;
     width: 60px;  
@@ -142,7 +154,7 @@ body {
     transition: transform 0.3s ease-in-out;
 }
 .fab_menu {
-    bottom: 35px;
+    bottom: 50px;
     list-style: none;
     opacity: 0;
     position: fixed;
@@ -150,11 +162,6 @@ body {
     text-align: right;
     transition: 0.3s ease-in-out;
     visibility: hidden;
-}
-
-.button_small:hover, .button:hover, .button_fab:hover {
-    background-color: var(--background-color);
-    box-shadow: inset 3px 3px 6px var(--shadow-color-1), inset -3px -3px 6px var(--shadow-color-2);
 }
 .button_fab:hover .material-symbols-outlined {
   transform: rotate(180deg);
@@ -165,14 +172,15 @@ body {
     visibility: visible;
 }
 
+
 @media (max-width: 720px) {
     .grid_intro, .grid_education, .grid_skills {
         grid-template-columns: 1fr;
     }
-    .grid_intro div:nth-child(2) {
+    .grid_intro .container:nth-child(2) {
         text-align: center;
-    }
-    .h1_margin {
-        margin-top: -15px;
+        & h1 {
+            margin-top: -30px;
+        }
     }
 }
