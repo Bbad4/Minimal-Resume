@@ -120,7 +120,7 @@ h1 {
     color: var(--button-color);
     cursor: pointer;
     font-weight: 600;
-    transition: 0.3s ease-in-out;
+    transition: 0.2s ease-in-out;
     &:hover {
         background-color: var(--background-color);
         box-shadow: inset 4px 4px 4px var(--shadow-color-1), inset -4px -4px 4px var(--shadow-color-2);
@@ -151,7 +151,7 @@ h1 {
 .material-symbols-outlined {
     font-size: 45px;
     margin-top: 2px;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.2s ease-in-out;
 }
 .fab_menu {
     bottom: 50px;
@@ -160,7 +160,7 @@ h1 {
     position: fixed;
     right: 15px;
     text-align: right;
-    transition: 0.3s ease-in-out;
+    transition: 0.2s ease-in-out;
     visibility: hidden;
 }
 .button_fab:hover .material-symbols-outlined {
