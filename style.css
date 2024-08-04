@@ -1,6 +1,7 @@
 html {
     scroll-behavior: smooth;
     -webkit-tap-highlight-color: transparent;
+    scroll-snap-type: y mandatory;
 }
 
 :root {
@@ -32,7 +33,7 @@ body {
     line-height: 1.7;
     margin: auto;
     max-width: 1080px;
-    padding: 20px;
+    padding: 0px 20px 20px 20px;
 }
 h3, p, ul {
     margin: 5px 0px 5px 0px;
@@ -45,6 +46,10 @@ ul {
 }
 h1 {
     margin: 15px 0px 15px 0px;
+}
+
+#intro, #experience, #education, #skills, #capstone {
+    scroll-snap-align: start;
 }
 
 .grid_intro, .grid_experience, .grid_education, .grid_skills, .grid_capstone {
@@ -62,6 +67,7 @@ h1 {
 
 .grid_intro {
     grid-template-columns: 1fr 2fr;
+    padding-top: 20px;
     & .container:nth-child(1) {
         border-radius: 50%;
         box-shadow: inset 6px 6px 10px var(--shadow-color-1), inset -6px -6px 10px var(--shadow-color-2);
