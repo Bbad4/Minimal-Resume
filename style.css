@@ -54,7 +54,6 @@ h1 {
 
 .grid_intro, .grid_experience, .grid_education, .grid_skills, .grid_capstone {
     display: grid;
-    grid-auto-rows: auto;
     grid-gap: 25px;
 }
 
